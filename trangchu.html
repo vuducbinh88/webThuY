@@ -6,303 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Chủ</title>
     <link href="trangchu.css" rel="stylesheet">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
-/* the important bits */
-#li {
-  perspective: 400px;
-}
-
-.info {
-  transform: rotate3d(1, 0, 0, 90deg);
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 4px;
-  pointer-events: none;
-  background-color: rgba(26, 188, 156, 0.9);
-}
-
-.in-top .info {
-  transform-origin: 50% 0%;
-  -webkit-animation: in-top 300ms ease 0ms 1 forwards;
-          animation: in-top 300ms ease 0ms 1 forwards;
-}
-
-.in-right .info {
-  transform-origin: 100% 0%;
-  -webkit-animation: in-right 300ms ease 0ms 1 forwards;
-          animation: in-right 300ms ease 0ms 1 forwards;
-}
-
-.in-bottom .info {
-  transform-origin: 50% 100%;
-  -webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
-          animation: in-bottom 300ms ease 0ms 1 forwards;
-}
-
-.in-left .info {
-  transform-origin: 0% 0%;
-  -webkit-animation: in-left 300ms ease 0ms 1 forwards;
-          animation: in-left 300ms ease 0ms 1 forwards;
-}
-
-.out-top .info {
-  transform-origin: 50% 0%;
-  -webkit-animation: out-top 300ms ease 0ms 1 forwards;
-          animation: out-top 300ms ease 0ms 1 forwards;
-}
-
-.out-right .info {
-  transform-origin: 100% 50%;
-  -webkit-animation: out-right 300ms ease 0ms 1 forwards;
-          animation: out-right 300ms ease 0ms 1 forwards;
-}
-
-.out-bottom .info {
-  transform-origin: 50% 100%;
-  -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
-          animation: out-bottom 300ms ease 0ms 1 forwards;
-}
-
-.out-left .info {
-  transform-origin: 0% 0%;
-  -webkit-animation: out-left 300ms ease 0ms 1 forwards;
-          animation: out-left 300ms ease 0ms 1 forwards;
-}
-
-@-webkit-keyframes in-top {
-  from {
-    transform: rotate3d(-1, 0, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-
-@keyframes in-top {
-  from {
-    transform: rotate3d(-1, 0, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@-webkit-keyframes in-right {
-  from {
-    transform: rotate3d(0, -1, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@keyframes in-right {
-  from {
-    transform: rotate3d(0, -1, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@-webkit-keyframes in-bottom {
-  from {
-    transform: rotate3d(1, 0, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@keyframes in-bottom {
-  from {
-    transform: rotate3d(1, 0, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@-webkit-keyframes in-left {
-  from {
-    transform: rotate3d(0, 1, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@keyframes in-left {
-  from {
-    transform: rotate3d(0, 1, 0, 90deg);
-  }
-  to {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-}
-@-webkit-keyframes out-top {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(-1, 0, 0, 104deg);
-  }
-}
-@keyframes out-top {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(-1, 0, 0, 104deg);
-  }
-}
-@-webkit-keyframes out-right {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(0, -1, 0, 104deg);
-  }
-}
-@keyframes out-right {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(0, -1, 0, 104deg);
-  }
-}
-@-webkit-keyframes out-bottom {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(1, 0, 0, 104deg);
-  }
-}
-@keyframes out-bottom {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(1, 0, 0, 104deg);
-  }
-}
-@-webkit-keyframes out-left {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(0, 1, 0, 104deg);
-  }
-}
-@keyframes out-left {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(0, 1, 0, 104deg);
-  }
-}
-/* you can ignore this ones */
-ul {
-  padding: 0;
-  margin: 0 0 50px;
-}
-ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#li {
-  position: relative;
-  float: left;
-  width: 200px;
-  height: 200px;
-  margin: 5px;
-  padding: 0;
-  list-style: none;
-}
-#li a {
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-  border-radius: 4px;
-}
-#li h3 {
-  margin: 0;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
-}
-#li p {
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
-}
-#li .normal {
-  width: 100%;
-  height: 100%;
-  background-color: #ECF0F1;
-  color: rgba(52, 73, 94, 0.6);
-  box-shadow: inset 0 2px 20px #e6ebed;
-  text-align: center;
-  font-size: 50px;
-  line-height: 200px;
-}
-#li .normal svg {
-  pointer-events: none;
-  width: 50px;
-}
-#li .normal svg path {
-  fill: rgba(52, 73, 94, 0.2);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-h1 {
-  margin: 0 auto 5px;
-  text-align: center;
-}
-
-h3 {
-  font-family: "Bree Serif", serif;
-}
-
-.container {
-  width: 840px;
-  margin: 0 auto;
-}
-
-    </style>  
-  
-
 
 </head>
 
 <body>
 
-    <div  style="background-color: #f5f5f5;">
+    <div style="background-color: #f5f5f5;">
         <header id="header" style="background-color: #FED101;">
-            <div >
+            <div>
 
-                <div >
+                <div>
                     <div style="width: 100%;display: flex;">
                         <h1 class="logo" style="width: 20%;margin: auto;margin-left: 15%;">
                             <a href="#"><img src="image/động_chó2.gif"></a>
                         </h1>
 
                         <nav class="nav-menu" style="width: 90%;margin: auto;">
-                            <ul style="list-style-type: none;" >
-                                <li  class="active"><a href="#" style="color: #000;">Trang chủ</a></li>
+                            <ul style="list-style-type: none;">
+                                <li class="active"><a href="#" style="color: #000;">Trang chủ</a></li>
                                 <li><a href="#" style="color: #000;">Giới thiệu</a></li>
-                                <li class="drop-down" ><a href="#" style="color: #000;">Sản phẩm</a>
+                                <li class="drop-down"><a href="#" style="color: #000;">Sản phẩm</a>
                                     <ul style="list-style-type: none;">
 
-                                        <li class="drop-down" style="list-style-type: none;"><a href="/rangtreem">Sản phẩm cho trâu bò dê cừu</a>
+                                        <li class="drop-down" style="list-style-type: none;"><a href="/rangtreem">Sản
+                                                phẩm cho trâu bò dê cừu</a>
                                             <ul style="list-style-type: none;">
 
                                                 <li><a href="/rangtreem">Sản phẩm cho trâu bò dê cừu</a></li>
@@ -388,8 +115,7 @@ h3 {
                                 <li><a href="#" style="color: #000;">Tin tức</a></li>
                                 <li><a href="#" style="color: #000;">Liên hệ</a></li>
 
-                                <div
-                                    style="display:inline;font-size: 13px;color: #000; padding:14px 0px 0px 15px;">
+                                <div style="display:inline;font-size: 13px;color: #000; padding:14px 0px 0px 15px;">
                                     <i class="ri-map-pin-line">
                                         Địa chỉ: Mỹ đình - Hà nội
                                     </i>
@@ -407,8 +133,8 @@ h3 {
         </header>
 
         <div id="hero">
-            <div  style="width: 90%;margin: 0 auto;min-height: 400px;">
-                <div  style="width: 100%;display: inline;">
+            <div style="width: 90%;margin: 0 auto;min-height: 400px;">
+                <div style="width: 100%;display: inline;">
                     <div class="slideshow-container" style="width:80%;float: left;margin-top: 20px;">
 
                         <div class="mySlides ">
@@ -418,8 +144,7 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
@@ -431,8 +156,7 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
@@ -444,8 +168,7 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
@@ -457,8 +180,7 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
@@ -470,8 +192,7 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
@@ -483,28 +204,27 @@ h3 {
                             <button class="button button1"
                                 style="width:  50%;margin: 0px ;height: 50px;float: left;">Bệnh
                                 và điều trị </button>
-                            <button class="button button1"
-                                style="width:  50%;margin: 0px ;height: 50px;">Sản
+                            <button class="button button1" style="width:  50%;margin: 0px ;height: 50px;">Sản
                                 phẩm </button>
 
                         </div>
-                        <!-- <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                     <div style="width: 27%;float: left;margin-left: 50px;margin-top: 40px;margin-bottom: 20px;">
 
                         <img src="image/show_gà.png">
-                        <span onclick="currentSlide(1)" class="snip1325"><img class="hieuung" src="image/show_bò.png"
+                        <span onclick="currentSlide(0)" class="snip1325"><img class="hieuung" src="image/show_bò.png"
                                 style="width: 40px;margin-left: 200px;"></span>
-                        <span onclick="currentSlide(2)" class="snip1325"><img class="hieuung" src="image/show_lợn.png"
+                        <span onclick="currentSlide(1)" class="snip1325"><img class="hieuung" src="image/show_lợn.png"
                                 style="width: 40px;"></span>
-                        <span onclick="currentSlide(3)" class="snip1325"><img class="hieuung" src="image/show_gà.png"
+                        <span onclick="currentSlide(2)" class="snip1325"><img class="hieuung" src="image/show_gà.png"
                                 style="width: 40px;"></span>
-                        <span onclick="currentSlide(4)" class="snip1325"> <img class="hieuung" src="image/show_chó.png"
+                        <span onclick="currentSlide(3)" class="snip1325"> <img class="hieuung" src="image/show_chó.png"
                                 style="width: 40px;"></span>
-                        <span onclick="currentSlide(5)" class="snip1325"><img class="hieuung" src="image/show_tôm.png"
+                        <span onclick="currentSlide(4)" class="snip1325"><img class="hieuung" src="image/show_tôm.png"
                                 style="width: 40px;"></span>
-                        <span onclick="currentSlide(6)" class="snip1325"><img class="hieuung" src="image/show_cá.png"
+                        <span onclick="currentSlide(5)" class="snip1325"><img class="hieuung" src="image/show_cá.png"
                                 style="width: 40px;"></span>
                     </div>
                 </div>
@@ -515,54 +235,165 @@ h3 {
 
 
         <div id="main">
-            <div id="cta" class="cta"  style="width: 90%;margin: 0 auto;margin-top: 10px;">
-                <div  style="width: 90%;margin: 0 auto;height: 100px;">
+            <div id="cta" class="cta" style="width: 90%;margin: 0 auto;margin-top: 10px;">
+                <div style="width: 90%;margin: 0 auto;height: 100px;">
 
-                    <div >
-                        <div  >
+                    <div>
+                        <div>
                             <h3 style="margin-top: 0px;">Thuốc tốt nhất cho vật nuôi</h3>
                             <p>Đồng hành cùng nhà chăn nuôi và nhà nuôi trồng thuỷ sản</p>
                         </div>
-                        <div class="cta-btn-container" >
-                            <button class="button button2" style="border-radius: 15px 15px 15px 15px;">Xem sản phẩm 
-                            <img src="image/động_muiten.gif" style="width: 50px;">
+                        <div class="cta-btn-container">
+                            <button class="button button2" style="border-radius: 15px 15px 15px 15px;">Xem sản phẩm
+                                <img src="image/động_muiten.gif" style="width: 50px;">
                             </button>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div  class="fixed-top" style="width: 90%;min-height: 420px; margin: 0 auto;margin-top:10px;">
-                <div  style="background:url(image/nền_chó.jpg)">
+            <div class="fixed-top" style="width: 90%;min-height: 380px; margin: 0 auto;margin-top:10px;">
+                <div>
 
-                    <div >
+                    <div>
+                        <div style="width: 100%;display: flex;background: url(image/nền_tin.jpg);height: 100px;">
+
+                            <h1 class="logo"
+                                style="width: 35%;margin: auto;color: white;height: 70px;margin-top: 25px;margin-left: 0px;">
+                                TIN TỨC - SỰ KIỆN
+                            </h1>
+                            <div class="new1" style="width: 60%;margin: auto;">
+                                <div class="thumb1" style="background-image: url(image/new.png);margin-left: 200px;">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            style="width: 100%;display: inline-block;background-color:  #f5f5f5;text-align: center;margin-top: 20px;margin-bottom: 30px;">
+                            <div class="divTintuc"
+                                style="width: 50%;margin: auto;float: left;margin-top: 10px;text-align: left;">
+                                <div class="article" style="width: 50%;margin: auto;float: left;">
+                                    <div class="thumb"
+                                        style="background-image: url(image/nền_bò.png);margin: 30px 16px 11px 30px;">
+                                    </div>
+
+                                </div>
+                                <div style="width: 50%;margin: auto;float: left;">
+                                    <h3 class="textTin">TRIỂN LÃM NÔNG NGHIỆP AGROVIET 2020</h3>
+                                    <h5 style="line-height: 19px;">
+                                        Triển lãm AgroViet 2020 được tổ chức từ ngày 3-6 tháng 12 năm 2020 tại Trung tâm
+                                        triển lãm Nông Nghiệp 489 đường Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Hanvet là
+                                        doanh nghiệp đã đồng hành cùng AgroViet nhiều năm, năm nào Hanvet cũng có gian
+                                        hàng tại triển lãm này.
+
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="divTintuc"
+                                style="width: 50%;margin: auto;float: left;margin-top: 10px;text-align: left;">
+                                <div class="article" style="width: 50%;margin: auto;float: left;">
+                                    <div class="thumb"
+                                        style="background-image: url(image/nền_bò.png);margin: 30px 16px 11px 30px;">
+                                    </div>
+
+                                </div>
+                                <div style="width: 50%;margin: auto;float: left;">
+                                    <h3 class="textTin">TRIỂN LÃM NÔNG NGHIỆP AGROVIET 2020</h3>
+                                    <h5 style="line-height: 19px;">
+                                        Triển lãm AgroViet 2020 được tổ chức từ ngày 3-6 tháng 12 năm 2020 tại Trung tâm
+                                        triển lãm Nông Nghiệp 489 đường Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Hanvet là
+                                        doanh nghiệp đã đồng hành cùng AgroViet nhiều năm, năm nào Hanvet cũng có gian
+                                        hàng tại triển lãm này.
+
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="divTintuc"
+                                style="width: 50%;margin: auto;float: left;margin-top: 10px;text-align: left;">
+                                <div class="article" style="width: 50%;margin: auto;float: left;">
+                                    <div class="thumb"
+                                        style="background-image: url(image/nền_bò.png);margin: 30px 16px 11px 30px;">
+                                    </div>
+
+                                </div>
+                                <div style="width: 50%;margin: auto;float: left;">
+                                    <h3 class="textTin">TRIỂN LÃM NÔNG NGHIỆP AGROVIET 2020</h3>
+                                    <h5 style="line-height: 19px;">
+                                        Triển lãm AgroViet 2020 được tổ chức từ ngày 3-6 tháng 12 năm 2020 tại Trung tâm
+                                        triển lãm Nông Nghiệp 489 đường Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Hanvet là
+                                        doanh nghiệp đã đồng hành cùng AgroViet nhiều năm, năm nào Hanvet cũng có gian
+                                        hàng tại triển lãm này.
+
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="divTintuc"
+                                style="width: 50%;margin: auto;float: left;margin-top: 10px;text-align: left;">
+                                <div class="article" style="width: 50%;margin: auto;float: left;">
+                                    <div class="thumb"
+                                        style="background-image: url(image/nền_bò.png);margin: 30px 16px 11px 30px;">
+                                    </div>
+
+                                </div>
+                                <div style="width: 50%;margin: auto;float: left;">
+                                    <h3 class="textTin">TRIỂN LÃM NÔNG NGHIỆP AGROVIET 2020</h3>
+                                    <h5 style="line-height: 19px;">
+                                        Triển lãm AgroViet 2020 được tổ chức từ ngày 3-6 tháng 12 năm 2020 tại Trung tâm
+                                        triển lãm Nông Nghiệp 489 đường Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Hanvet là
+                                        doanh nghiệp đã đồng hành cùng AgroViet nhiều năm, năm nào Hanvet cũng có gian
+                                        hàng tại triển lãm này.
+
+                                    </h5>
+                                </div>
+                            </div>
+                            <div style="width: 10%;margin: auto;float: left;">
+
+                            </div>
+                            <div style="width: 45%;margin: auto;float: left;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="fixed-top" style="width: 90%;min-height: 420px; margin: 0 auto;margin-top:10px;">
+                <div style="background:url(image/nền_chó.jpg)">
+
+                    <div>
                         <div style="width: 100%;display: flex;">
-                     <h1 class="logo" style="width: 30%;margin: auto;color: white;">
-                                <img src="image/động_chim.gif" style="height: 50px;">
-                                SẢN PHẨM MỚI
+                            <h1 class="logo" style="width: 30%;margin: auto;color: white;">
+
+                                SẢN PHẨM NỔI BẬT
 
                             </h1>
 
                             <nav class="nav-menu" style="width: 60%;margin: auto;">
                                 <ul>
-                                    <li><a href="#" id="product">Trâu bò <img src="image/động_bò1.gif" style="height: 50px;"></a>
+                                    <li><a href="#" id="product">Trâu bò <img src="image/động_bò1.gif"
+                                                style="height: 50px;"></a>
                                     </li>
-                                    <li><a href="#" id="product" >Heo
-                                        <img src="image/động_lợn1.gif" style="height: 50px;">
-                                    </a></li>
+                                    <li><a href="#" id="product">Heo
+                                            <img src="image/động_lợn1.gif" style="height: 50px;">
+                                        </a></li>
                                     <li><a href="#" id="product">Gia cầm
-                                        <img src="image/động_gà.gif" style="height: 50px;">
-                                    </a>
+                                            <img src="image/động_gà.gif" style="height: 50px;">
+                                        </a>
                                     </li>
 
                                     <li><a href="#" id="product">Chó mèo
-                                        <img src="image/động_chó4.gif" style="height: 50px;"></a></li>
+                                            <img src="image/động_chó4.gif" style="height: 50px;"></a></li>
                                     <li><a href="#" id="product">Tôm
-                                        <img src="image/động_tôm2.gif" style="height: 50px;">
-                                    </a></li>
+                                            <img src="image/động_tôm2.gif" style="height: 50px;">
+                                        </a></li>
                                     <li><a href="#" id="product">Cá
-                                        <img src="image/động_cá.gif" style="height: 50px;">
-                                    </a></li>
+                                            <img src="image/động_cá.gif" style="height: 50px;">
+                                        </a></li>
 
                                 </ul>
                             </nav>
@@ -573,40 +404,45 @@ h3 {
 
                 </div>
                 <div style="width: 100%;display: inline;">
-                    
+
                     <div style="width: 60%; float: left;background-color:  rgb(255, 255, 255);">
                         <table style="min-height: 322px;">
                             <tbody>
                                 <tr>
                                     <td style="width: 239px;text-align: center;border-right: ridge;">
                                         <a href="#">
-                                            <img src="image/b comlex + zyme c.jpg" style="width: 100px;margin-top:9px;">
-                                            <h3>b comlex + zyme c </h3>
-                                            <div style="text-align: left;">
-                                                
-                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi </h5>
-                                            </div>
-                                            
-                                        </a>
-                                    </td>
-                                    <td style="width: 239px;text-align: center;border-right: ridge;">
-                                        <a href="#">
-                                            <img src="image/b comlex + zyme c.jpg" style="width: 100px;margin-top:9px;">
-                                            <h3>b comlex + zyme c </h3>
-                                            <div style="text-align: left;">
-                                                
-                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi </h5>
+                                            <img src="image/b comlex + zyme c.jpg" style="width: 115px;margin-top:9px;">
+                                            <h3 style="color: red;">b comlex + zyme c </h3>
+                                            <div style="text-align: left;margin: 0px 10px 0px 10px;">
+
+                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi
+                                                </h5>
                                             </div>
 
                                         </a>
                                     </td>
                                     <td style="width: 239px;text-align: center;border-right: ridge;">
                                         <a href="#">
-                                            <img src="image/b comlex + zyme c.jpg" style="width: 100px;margin-top:9px;">
-                                            <h3>b comlex + zyme c </h3>
-                                            <div style="text-align: left;">
-                                                
-                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi </h5>
+                                            <img src="image/buta-phosphan + b12.png"
+                                                style="width: 100px;margin-top:9px;">
+                                            <h3 style="color: red;">buta-phosphan + b12 </h3>
+                                            <div style="text-align: left;margin: 0px 10px 0px 10px;">
+
+                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi
+                                                </h5>
+                                            </div>
+
+                                        </a>
+                                    </td>
+                                    <td style="width: 239px;text-align: center;border-right: ridge;">
+                                        <a href="#">
+                                            <img src="image/bromen bạc hà_mặt 1.png"
+                                                style="width: 100px;margin-top:9px;">
+                                            <h3 style="color: red;">bromen bạc hà </h3>
+                                            <div style="text-align: left;margin: 0px 10px 0px 10px;">
+
+                                                <h5>Dùng cho chó gà, giúp tăng cân nhanh và bảo vệ sức khỏe vật nuôi
+                                                </h5>
                                             </div>
 
                                         </a>
@@ -620,18 +456,40 @@ h3 {
                         <table>
                             <tbody>
                                 <tr>
-                                    
-                                    <td><a href="#"><img src="image/b comlex + zyme c.jpg" style="width: 198px;margin:10px;"></a></td>
-                                    <td>
-                                        
-                                        <h6>TÊN SẢN PHẨM </h6>
-                                        <h6>CHỈ ĐỊNH </h6>
-                                        <h6>CÁCH DÙNG VÀ LIỀU DÙNG</h6>
-                                        <h6>LƯU Ý KHI SỬ DỤNG</h6>
-                                        
-                                        
+
+                                    <td><a href="#"><img src="image/b comlex + zyme c.jpg"
+                                                style="margin:10px;height: 235px;">
+                                            <h4 style="text-align: center;color: red;">b comlex + zyme c </h4>
+
+                                        </a>
                                     </td>
-                                
+                                    <td>
+                                        <h5 style="margin-bottom:0px ;">CHỈ ĐỊNH:</h5>
+                                        <h6 style="margin-top:5px ;">
+                                            HANSULCOX-WSP có tác dụng hiệu quả phòng ngừa và điều trị chống lại các bệnh
+                                            sau:
+                                            <br>
+                                            Gia cầm:<br>
+                                            - Bệnh cầu trùng đường ruột.<br>
+                                            - Bệnh cầu trùng ghép E.coli và Salmonella.<br>
+                                            - Bệnh pullorum ( phân trắng gà con)<br>
+                                            - Thương hàn gà.<br>
+                                            Bê, cừu, heo con: Viêm ruột gây ra bởi cầu trùng và các vi khuẩn đường
+                                            ruột.<br>
+                                            Thỏ: Bệnh cầu trùng đường ruột (ỉa chảy phân xanh hoặc phân lẫn máu)
+                                        </h6>
+                                        <h5 style="margin-bottom: 0px;">CÁCH DÙNG:</h5>
+                                        <h6 style="margin-top:5px ;">
+
+                                            Pha 100g thuốc với 100 lít nước uống hoặc 1 gam cho 10 kg thể trọng
+                                            <br>
+                                            Dùng liên tục 3 ngày.<br>
+                                            Thuốc pha rồi, chỉ sử dụng trong vòng 24 giờ.
+                                        </h6>
+
+
+                                    </td>
+
                                 </tr>
                             </tbody>
                         </table>
@@ -639,125 +497,155 @@ h3 {
                 </div>
             </div>
 
-
-
-            <div style="width:90%;background:url(image/nền_cá.png);margin: 0 auto;margin-bottom: 10px;margin-top: 15px;">
+            <div
+                style="width:90%;background:url(image/nền_cá.png);margin: 0 auto;margin-bottom: 10px;margin-top: 15px;">
                 <div style="height: 10px;"></div>
                 <h1 style="height: 70px;margin-left: 80px;color: white;">BỆNH VÀ ĐIỀU TRỊ BỆNH
-                <img src="image/động_chó4.gif" style="height: 50px;margin-bottom: 20px;">
-            </h1>
-                
-      <div class='container'>
-        <ul>
-          <li id="li">
-            <a class='normal' href='#'>
-              
-                <img src="image/động_bò1.gif" style="width: 170px;">
-              
-            </a>
-            <div class='info'>
-              <h3>Trâu bò +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho trâu bò!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_lợn1.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Lợn +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dùng cho lợn!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_gà.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Gà +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho gà</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_vịt1.gif" style="width: 110px;">
-            </a>
-            <div class='info'>
-              <h3>Ngan vịt +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho ngan, vịt!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_chó4.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Chó +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho chó!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_tôm2.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Tôm +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho tôm!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_cá.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Cá +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho cá!</p>
-            </div>
-          </li>
-          <li id="li">
-            <a class='normal' href='#'>
-                <img src="image/động_ngựa.gif" style="width: 170px;">
-            </a>
-            <div class='info'>
-              <h3>Vật nuôi khác +</h3>
-              <p>Bệnh, cách điều trị và sản phẩm thuốc liên quan!</p>
-            </div>
-          </li>
-          
-          
-        </ul>
-      </div>
-                
+                    <img src="image/động_chó4.gif" style="height: 50px;margin-bottom: 20px;">
+                </h1>
+
+                <div class='container'>
+                    <ul>
+                        <li id="li">
+                            <a class='normal' href='#'>
+
+                                <img src="image/động_bò1.gif" style="width: 170px;">
+
+                            </a>
+                            <div class='info'>
+                                <h3>Trâu bò +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho trâu bò!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_lợn1.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Lợn +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dùng cho lợn!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_gà.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Gà +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho gà</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_vịt1.gif" style="width: 110px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Ngan vịt +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho ngan, vịt!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_chó4.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Chó +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho chó!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_tôm2.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Tôm +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho tôm!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_cá.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Cá +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc dành cho cá!</p>
+                            </div>
+                        </li>
+                        <li id="li">
+                            <a class='normal' href='#'>
+                                <img src="image/động_ngựa.gif" style="width: 170px;">
+                            </a>
+                            <div class='info'>
+                                <h3>Vật nuôi khác +</h3>
+                                <p>Bệnh, cách điều trị và sản phẩm thuốc liên quan!</p>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+
             </div>
 
 
         </div>
-        
-        <footer id="footer" style="clear: left;">
-            <div >
-                <h3>Thuốc thú ý</h3>
 
-                <div style="display:inline;color:rgba(0,0,0,.65); padding:8px 0px 0px 15px;font-size: 18px;">
-                    <i class="ri-map-pin-line">
-                        Địa chỉ: Mỹ đình - Hà nội
-                    </i>
-                    <br>
-                    <i class="ri-phone-line">
-                        Hotline/Email: 09.2929.6666 | abc@gmail.com
-                    </i>
-                </div>
-                <div class="copyright">
-                    <br>
-                    ©2021 Bản quyền thuộc về thú y
-                </div>
+
+    </div>
+    <footer id="footer" style="clear: left;background-color: #ece2a3;padding-top: 0px;margin-top: 0px;">
+        <div style="width: 80%;margin: 0 auto;">
+            <div style="width: 20%;float: left;text-align: left;">
+               <h4 style="font-size: 22px;">Danh mục</h4>
+               <a href="#">Sản phẩm</a><br>
+               <a href="#">Tin tức</a><br>
+               <a href="#">Kỹ thuật nuôi</a><br>
+               <a href="#">Hỏi đáp sản phẩm</a>
+               
 
             </div>
-        </footer>
-    </div>
+            <div style="width: 20%;float: left;text-align: left;">
+                <div style="height: 88px;"></div>
+                <a href="#"  > Tuyển dụng</a><br>
+                <a href="#">Video clip</a><br>
+                <a href="#">Thư viện ảnh</a><br>
+                <a href="#">Liên hệ</a>
+                
+ 
+             </div>
+             <div style="width: 20%;float: left;text-align: left;display: block;">
+                <h4 style="font-size: 22px;">Thông tin liên hệ</h4>
 
+                <div style="display:inline;color:rgba(0,0,0,.65); font-size: 15px;">
+                    <h5 style="margin: 10px 0px 0px 0px;">Địa chỉ: Mỹ đình - Hà nội</h5>
+                        
+                   
+                   <h5 style="margin: 10px 0px 0px 0px;">Hotline: 09.2929.6666</h5>
+                        
+                        <h5 style="margin: 10px 0px 0px 0px;">Email:abc@gmail.com</h5>
+                        
+                </div>
+ 
+             </div>
+            <div style="width: 40%;float: left;text-align: left;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881398!2d105.74459841429794!3d21.038132792835565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2sFPT%20Polytechnic%20Hanoi!5e0!3m2!1sen!2s!4v1611238805759!5m2!1sen!2s" 
+                width="430" height="200" style="margin-top: 10px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                
+            </div>
+            
+             <div style="height: 10px;clear: left;"></div>
+             <hr>
+        </div>
+        <div  style="clear: left;">
+            <div style="height: 10px;"></div>
+            
+            ©2021 Bản quyền thuộc về thú y
+        </div>
+    </footer>
+    
     <script>
+        var slideIndex = 0;
 
-        var slideIndex = 1;
+
         showSlides(slideIndex);
 
         function plusSlides(n) {
@@ -781,61 +669,64 @@ h3 {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        }
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
         }
 
-</script>
-<script>
-        function flakeFall() { if (!getRefToDivNest("snFlkDiv0")) { return } var e = 0, t = 0, n = 0, r = 0; if (typeof window.innerWidth == "number") { e = window.innerWidth; t = window.innerHeight } else { if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) { e = document.documentElement.clientWidth; t = document.documentElement.clientHeight } else { if (document.body && (document.body.clientWidth || document.body.clientHeight)) { e = document.body.clientWidth; t = document.body.clientHeight } } } if (typeof window.pageYOffset == "number") { n = pageYOffset; r = pageXOffset } else { if (document.body && (document.body.scrollLeft || document.body.scrollTop)) { n = document.body.scrollTop; r = document.body.scrollLeft } else { if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) { n = document.documentElement.scrollTop; r = document.documentElement.scrollLeft } } } for (var i = 0; i < numFlakes; i++) { if (ycoords[i] * t > t - pictureHeight) { ycoords[i] = 0 } var s = getRefToDivNest("snFlkDiv" + i); if (!s) { return } if (s.style) { s = s.style } var o = document.childNodes ? "px" : 0; s.top = Math.round(ycoords[i] * t) + n + o; s.left = Math.round(xcoords[i] * e - pictureWidth / 2 + e / ((numFlakes + 1) * 4) * (Math.sin(lrFlakes * ycoords[i]) - Math.sin(3 * lrFlakes * ycoords[i]))) + r + o; ycoords[i] += downSpeed } } function getRefToDivNest(e) { if (document.layers) { return document.layers[e] } if (document[e]) { return document[e] } if (document.getElementById) { return document.getElementById(e) } if (document.all) { return document.all[e] } return false } var pictureSrc = "http://1.bp.blogspot.com/-aZQXzUqSw5E/VKdQ-NZEaxI/AAAAAAAAB9U/3Cj3b3PLygk/s1600/hoa-mai.png"; var pictureWidth = 20; var pictureHeight = 20; var numFlakes = 10; var downSpeed = .01; var lrFlakes = 10; if (typeof numFlakes != "number" || Math.round(numFlakes) != numFlakes || numFlakes < 1) { numFlakes = 10 } for (var x = 0; x < numFlakes; x++) { if (document.layers) { document.write('<layer id="snFlkDiv' + x + '"><imgsrc="' + pictureSrc + '" height="' + pictureHeight + '"width="' + pictureWidth + '" alt="*" border="0"></layer>') } else { document.write('<div style="position:absolute;"id="snFlkDiv' + x + '"><img src="' + pictureSrc + '"height="' + pictureHeight + '" width="' + pictureWidth + '" alt="*"border="0"></div>') } } var xcoords = new Array, ycoords = new Array, snFlkTemp; for (var x = 0; x < numFlakes; x++) { xcoords[x] = (x + 1) / (numFlakes + 1); do { snFlkTemp = Math.round((numFlakes - 1) * Math.random()) } while (typeof ycoords[snFlkTemp] == "number"); ycoords[snFlkTemp] = x / numFlakes } window.setInterval("flakeFall();", 100)//]]>
 
-        Date.now || (Date.now = function () { return (new Date).getTime() }), function () { "use strict"; for (var t = ["webkit", "moz"], e = 0; e < t.length && !window.requestAnimationFrame; ++e) { var i = t[e]; window.requestAnimationFrame = window[i + "RequestAnimationFrame"], window.cancelAnimationFrame = window[i + "CancelAnimationFrame"] || window[i + "CancelRequestAnimationFrame"] } if (/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) || !window.requestAnimationFrame || !window.cancelAnimationFrame) { var s = 0; window.requestAnimationFrame = function (t) { var e = Date.now(), i = Math.max(s + 16, e); return setTimeout(function () { t(s = i) }, i - e) }, window.cancelAnimationFrame = clearTimeout } }(), function (t) { t.snowfall = function (e, i) { function s(s, n, a, r) { this.x = s, this.y = n, this.size = a, this.speed = r, this.step = 0, this.stepSize = h(1, 10) / 100, i.collection && (this.target = m[h(0, m.length - 1)]); var p = null; i.image ? (p = document.createElement("img"), p.src = i.image) : (p = document.createElement("div"), t(p).css({ background: i.flakeColor })), t(p).attr({ "class": "snowfall-flakes" }).css({ width: this.size, height: this.size, position: i.flakePosition, top: this.y, left: this.x, fontSize: 0, zIndex: i.flakeIndex }), t(e).get(0).tagName === t(document).get(0).tagName ? (t("body").append(t(p)), e = t("body")) : t(e).append(t(p)), this.element = p, this.update = function () { if (this.y += this.speed, this.y > l - (this.size + 6) && this.reset(), this.element.style.top = this.y + "px", this.element.style.left = this.x + "px", this.step += this.stepSize, y === !1 ? this.x += Math.cos(this.step) : this.x += y + Math.cos(this.step), i.collection && this.x > this.target.x && this.x < this.target.width + this.target.x && this.y > this.target.y && this.y < this.target.height + this.target.y) { var t = this.target.element.getContext("2d"), e = this.x - this.target.x, s = this.y - this.target.y, n = this.target.colData; if (void 0 !== n[parseInt(e)][parseInt(s + this.speed + this.size)] || s + this.speed + this.size > this.target.height) if (s + this.speed + this.size > this.target.height) { for (; s + this.speed + this.size > this.target.height && this.speed > 0;)this.speed *= .5; t.fillStyle = o.flakeColor, void 0 == n[parseInt(e)][parseInt(s + this.speed + this.size)] ? (n[parseInt(e)][parseInt(s + this.speed + this.size)] = 1, t.fillRect(e, s + this.speed + this.size, this.size, this.size)) : (n[parseInt(e)][parseInt(s + this.speed)] = 1, t.fillRect(e, s + this.speed, this.size, this.size)), this.reset() } else this.speed = 1, this.stepSize = 0, parseInt(e) + 1 < this.target.width && void 0 == n[parseInt(e) + 1][parseInt(s) + 1] ? this.x++ : parseInt(e) - 1 > 0 && void 0 == n[parseInt(e) - 1][parseInt(s) + 1] ? this.x-- : (t.fillStyle = o.flakeColor, t.fillRect(e, s, this.size, this.size), n[parseInt(e)][parseInt(s)] = 1, this.reset()) } (this.x + this.size > d - c || this.x < c) && this.reset() }, this.reset = function () { this.y = 0, this.x = h(c, d - c), this.stepSize = h(1, 10) / 100, this.size = h(100 * i.minSize, 100 * i.maxSize) / 100, this.element.style.width = this.size + "px", this.element.style.height = this.size + "px", this.speed = h(i.minSpeed, i.maxSpeed) } } function n() { for (r = 0; r < a.length; r += 1)a[r].update(); p = requestAnimationFrame(function () { n() }) } var a = [], o = { flakeCount: 35, flakeColor: "#ffffff", flakePosition: "absolute", flakeIndex: 999999, minSize: 1, maxSize: 2, minSpeed: 1, maxSpeed: 5, round: !1, shadow: !1, collection: !1, collectionHeight: 40, deviceorientation: !1 }, i = t.extend(o, i), h = function (t, e) { return Math.round(t + Math.random() * (e - t)) }; t(e).data("snowfall", this); var r = 0, l = t(e).height(), d = t(e).width(), c = 0, p = 0; if (i.collection !== !1) { var f = document.createElement("canvas"); if (f.getContext && f.getContext("2d")) for (var m = [], w = t(i.collection), g = i.collectionHeight, r = 0; r < w.length; r++) { var u = w[r].getBoundingClientRect(), x = t("<canvas/>", { "class": "snowfall-canvas" }), z = []; if (u.top - g > 0) { t("body").append(x), x.css({ position: i.flakePosition, left: u.left + "px", top: u.top - g + "px" }).prop({ width: u.width, height: g }); for (var v = 0; v < u.width; v++)z[v] = []; m.push({ element: x.get(0), x: u.left, y: u.top - g, width: u.width, height: g, colData: z }) } } else i.collection = !1 } for (t(e).get(0).tagName === t(document).get(0).tagName && (c = 25), t(window).bind("resize", function () { l = t(e)[0].clientHeight, d = t(e)[0].offsetWidth }), r = 0; r < i.flakeCount; r += 1)a.push(new s(h(c, d - c), h(0, l), h(100 * i.minSize, 100 * i.maxSize) / 100, h(i.minSpeed, i.maxSpeed))); i.round && t(".snowfall-flakes").css({ "-moz-border-radius": i.maxSize, "-webkit-border-radius": i.maxSize, "border-radius": i.maxSize }), i.shadow && t(".snowfall-flakes").css({ "-moz-box-shadow": "1px 1px 1px #555", "-webkit-box-shadow": "1px 1px 1px #555", "box-shadow": "1px 1px 1px #555" }); var y = !1; i.deviceorientation && t(window).bind("deviceorientation", function (t) { y = .1 * t.originalEvent.gamma }), n(), this.clear = function () { t(".snowfall-canvas").remove(), t(e).children(".snowfall-flakes").remove(), cancelAnimationFrame(p) } }, t.fn.snowfall = function (e) { return "object" == typeof e || void 0 == e ? this.each(function (i) { new t.snowfall(this, e) }) : "string" == typeof e ? this.each(function (e) { var i = t(this).data("snowfall"); i && i.clear() }) : void 0 } }(jQuery);
-
-        $(document).ready(function () {
-            $(document).snowfall({ image: "https://4.bp.blogspot.com/-Pz9gplYXnVg/WHeI3NW2o0I/AAAAAAAACfM/bQhjTtpeZeIC2vMKRYN6u5do6HppGIkwACLcB/s1600/hoamai1.png", minSize: 10, maxSize: 32, flakeCount: 25 });
-            $(document).snowfall({ image: "https://1.bp.blogspot.com/-groQ9fqAtWk/WHeI6IN-bUI/AAAAAAAACfU/RC2RXr75qDAZKOsmSEqNeb_OyhFQ5gH8ACLcB/s1600/hoamai2.png", minSize: 10, maxSize: 32, flakeCount: 20 });
-            $(document).snowfall({ image: "https://2.bp.blogspot.com/-4npl186jl6A/WHeI3c_516I/AAAAAAAACfQ/9DbJuPWlz9I1i7836YHLoJR_NSAFDn3fACLcB/s1600/hoamai3.png", minSize: 10, maxSize: 32, flakeCount: 20 });
-        });
     </script>
+
+
+
     <script>
 
-        $(".hover").mouseleave(
-            function () {
-                $(this).removeClass("hover");
+        // - Noel Delgado | @pixelia_me
+
+        const nodes = [].slice.call(document.querySelectorAll('li'), 0);
+        const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
+        const classNames = ['in', 'out'].map(p => Object.values(directions).map(d => `${p}-${d}`)).reduce((a, b) => a.concat(b));
+
+        const getDirectionKey = (ev, node) => {
+            const { width, height, top, left } = node.getBoundingClientRect();
+            const l = ev.pageX - (left + window.pageXOffset);
+            const t = ev.pageY - (top + window.pageYOffset);
+            const x = l - width / 2 * (width > height ? height / width : 1);
+            const y = t - height / 2 * (height > width ? width / height : 1);
+            return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+        };
+
+        class Item {
+            constructor(element) {
+                this.element = element;
+                this.element.addEventListener('mouseover', ev => this.update(ev, 'in'));
+                this.element.addEventListener('mouseout', ev => this.update(ev, 'out'));
             }
-        );
+
+            update(ev, prefix) {
+                this.element.classList.remove(...classNames);
+                this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
+            }
+        }
+
+
+        nodes.forEach(node => new Item(node));
     </script>
-     <script>
-          
-// - Noel Delgado | @pixelia_me
 
-const nodes = [].slice.call(document.querySelectorAll('li'), 0);
-const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
-const classNames = ['in', 'out'].map(p => Object.values(directions).map(d => `${p}-${d}`)).reduce((a, b) => a.concat(b));
-
-const getDirectionKey = (ev, node) => {
-  const { width, height, top, left } = node.getBoundingClientRect();
-  const l = ev.pageX - (left + window.pageXOffset);
-  const t = ev.pageY - (top + window.pageYOffset);
-  const x = l - width / 2 * (width > height ? height / width : 1);
-  const y = t - height / 2 * (height > width ? width / height : 1);
-  return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
-};
-
-class Item {
-  constructor(element) {
-    this.element = element;
-    this.element.addEventListener('mouseover', ev => this.update(ev, 'in'));
-    this.element.addEventListener('mouseout', ev => this.update(ev, 'out'));
-  }
-
-  update(ev, prefix) {
-    this.element.classList.remove(...classNames);
-    this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
-  }}
-
-
-nodes.forEach(node => new Item(node));
-      </script>
 </body>
 
 </html>
